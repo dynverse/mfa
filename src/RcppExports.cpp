@@ -7,7 +7,7 @@ using namespace Rcpp;
 
 // log_d_norm
 double log_d_norm(double x, double mu, double sigma);
-RcppExport SEXP mfa_log_d_norm(SEXP xSEXP, SEXP muSEXP, SEXP sigmaSEXP) {
+RcppExport SEXP _mfa_log_d_norm(SEXP xSEXP, SEXP muSEXP, SEXP sigmaSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -20,7 +20,7 @@ END_RCPP
 }
 // log_sum_exp
 double log_sum_exp(NumericVector x);
-RcppExport SEXP mfa_log_sum_exp(SEXP xSEXP) {
+RcppExport SEXP _mfa_log_sum_exp(SEXP xSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -31,7 +31,7 @@ END_RCPP
 }
 // r_bernoulli_mat
 IntegerVector r_bernoulli_mat(NumericMatrix pi);
-RcppExport SEXP mfa_r_bernoulli_mat(SEXP piSEXP) {
+RcppExport SEXP _mfa_r_bernoulli_mat(SEXP piSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -42,7 +42,7 @@ END_RCPP
 }
 // calculate_nuk
 NumericVector calculate_nuk(NumericMatrix y, NumericVector pst, NumericVector c, NumericVector tau, NumericVector theta, NumericVector tau_k, LogicalVector which_l);
-RcppExport SEXP mfa_calculate_nuk(SEXP ySEXP, SEXP pstSEXP, SEXP cSEXP, SEXP tauSEXP, SEXP thetaSEXP, SEXP tau_kSEXP, SEXP which_lSEXP) {
+RcppExport SEXP _mfa_calculate_nuk(SEXP ySEXP, SEXP pstSEXP, SEXP cSEXP, SEXP tauSEXP, SEXP thetaSEXP, SEXP tau_kSEXP, SEXP which_lSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -59,7 +59,7 @@ END_RCPP
 }
 // calculate_lamk
 NumericVector calculate_lamk(NumericVector chi, NumericVector tau, NumericVector pst, LogicalVector which_l);
-RcppExport SEXP mfa_calculate_lamk(SEXP chiSEXP, SEXP tauSEXP, SEXP pstSEXP, SEXP which_lSEXP) {
+RcppExport SEXP _mfa_calculate_lamk(SEXP chiSEXP, SEXP tauSEXP, SEXP pstSEXP, SEXP which_lSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -73,7 +73,7 @@ END_RCPP
 }
 // sample_k
 NumericVector sample_k(NumericMatrix y, NumericVector pst, NumericVector c, NumericVector tau, NumericVector theta, NumericVector tau_k, LogicalVector which_l);
-RcppExport SEXP mfa_sample_k(SEXP ySEXP, SEXP pstSEXP, SEXP cSEXP, SEXP tauSEXP, SEXP thetaSEXP, SEXP tau_kSEXP, SEXP which_lSEXP) {
+RcppExport SEXP _mfa_sample_k(SEXP ySEXP, SEXP pstSEXP, SEXP cSEXP, SEXP tauSEXP, SEXP thetaSEXP, SEXP tau_kSEXP, SEXP which_lSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -90,7 +90,7 @@ END_RCPP
 }
 // calculate_nuc
 NumericVector calculate_nuc(NumericMatrix y, NumericVector pst, NumericVector k, NumericVector tau, double eta, double tau_c, LogicalVector which_l);
-RcppExport SEXP mfa_calculate_nuc(SEXP ySEXP, SEXP pstSEXP, SEXP kSEXP, SEXP tauSEXP, SEXP etaSEXP, SEXP tau_cSEXP, SEXP which_lSEXP) {
+RcppExport SEXP _mfa_calculate_nuc(SEXP ySEXP, SEXP pstSEXP, SEXP kSEXP, SEXP tauSEXP, SEXP etaSEXP, SEXP tau_cSEXP, SEXP which_lSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -107,7 +107,7 @@ END_RCPP
 }
 // calculate_lamc
 NumericVector calculate_lamc(NumericVector tau, double tau_c, int N);
-RcppExport SEXP mfa_calculate_lamc(SEXP tauSEXP, SEXP tau_cSEXP, SEXP NSEXP) {
+RcppExport SEXP _mfa_calculate_lamc(SEXP tauSEXP, SEXP tau_cSEXP, SEXP NSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -120,7 +120,7 @@ END_RCPP
 }
 // sample_c
 NumericVector sample_c(NumericMatrix y, NumericVector pst, NumericVector k, NumericVector tau, double eta, double tau_c, LogicalVector which_l, int N);
-RcppExport SEXP mfa_sample_c(SEXP ySEXP, SEXP pstSEXP, SEXP kSEXP, SEXP tauSEXP, SEXP etaSEXP, SEXP tau_cSEXP, SEXP which_lSEXP, SEXP NSEXP) {
+RcppExport SEXP _mfa_sample_c(SEXP ySEXP, SEXP pstSEXP, SEXP kSEXP, SEXP tauSEXP, SEXP etaSEXP, SEXP tau_cSEXP, SEXP which_lSEXP, SEXP NSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -138,7 +138,7 @@ END_RCPP
 }
 // pst_update_par
 NumericMatrix pst_update_par(NumericMatrix y, NumericMatrix c, NumericMatrix k, double r, NumericVector gamma, NumericVector tau);
-RcppExport SEXP mfa_pst_update_par(SEXP ySEXP, SEXP cSEXP, SEXP kSEXP, SEXP rSEXP, SEXP gammaSEXP, SEXP tauSEXP) {
+RcppExport SEXP _mfa_pst_update_par(SEXP ySEXP, SEXP cSEXP, SEXP kSEXP, SEXP rSEXP, SEXP gammaSEXP, SEXP tauSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -154,7 +154,7 @@ END_RCPP
 }
 // sample_pst
 NumericVector sample_pst(NumericMatrix y, NumericMatrix c, NumericMatrix k, double r, NumericVector gamma, NumericVector tau);
-RcppExport SEXP mfa_sample_pst(SEXP ySEXP, SEXP cSEXP, SEXP kSEXP, SEXP rSEXP, SEXP gammaSEXP, SEXP tauSEXP) {
+RcppExport SEXP _mfa_sample_pst(SEXP ySEXP, SEXP cSEXP, SEXP kSEXP, SEXP rSEXP, SEXP gammaSEXP, SEXP tauSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -170,7 +170,7 @@ END_RCPP
 }
 // tau_params
 NumericMatrix tau_params(NumericMatrix y, NumericMatrix c, NumericMatrix k, NumericVector gamma, NumericVector pst, double alpha, double beta);
-RcppExport SEXP mfa_tau_params(SEXP ySEXP, SEXP cSEXP, SEXP kSEXP, SEXP gammaSEXP, SEXP pstSEXP, SEXP alphaSEXP, SEXP betaSEXP) {
+RcppExport SEXP _mfa_tau_params(SEXP ySEXP, SEXP cSEXP, SEXP kSEXP, SEXP gammaSEXP, SEXP pstSEXP, SEXP alphaSEXP, SEXP betaSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -187,7 +187,7 @@ END_RCPP
 }
 // sample_tau
 NumericVector sample_tau(NumericMatrix y, NumericMatrix c, NumericMatrix k, NumericVector gamma, NumericVector pst, double alpha, double beta);
-RcppExport SEXP mfa_sample_tau(SEXP ySEXP, SEXP cSEXP, SEXP kSEXP, SEXP gammaSEXP, SEXP pstSEXP, SEXP alphaSEXP, SEXP betaSEXP) {
+RcppExport SEXP _mfa_sample_tau(SEXP ySEXP, SEXP cSEXP, SEXP kSEXP, SEXP gammaSEXP, SEXP pstSEXP, SEXP alphaSEXP, SEXP betaSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -204,7 +204,7 @@ END_RCPP
 }
 // calculate_pi
 NumericMatrix calculate_pi(NumericMatrix y, NumericMatrix c, NumericMatrix k, NumericVector pst, NumericVector tau, double eta, double tau_c, bool collapse, NumericVector log_w, bool log_result);
-RcppExport SEXP mfa_calculate_pi(SEXP ySEXP, SEXP cSEXP, SEXP kSEXP, SEXP pstSEXP, SEXP tauSEXP, SEXP etaSEXP, SEXP tau_cSEXP, SEXP collapseSEXP, SEXP log_wSEXP, SEXP log_resultSEXP) {
+RcppExport SEXP _mfa_calculate_pi(SEXP ySEXP, SEXP cSEXP, SEXP kSEXP, SEXP pstSEXP, SEXP tauSEXP, SEXP etaSEXP, SEXP tau_cSEXP, SEXP collapseSEXP, SEXP log_wSEXP, SEXP log_resultSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -224,7 +224,7 @@ END_RCPP
 }
 // sample_x
 NumericMatrix sample_x(NumericMatrix x, LogicalMatrix is_dropout, NumericMatrix c, NumericMatrix k, NumericVector gamma, NumericVector pst, NumericVector tau, double lambda);
-RcppExport SEXP mfa_sample_x(SEXP xSEXP, SEXP is_dropoutSEXP, SEXP cSEXP, SEXP kSEXP, SEXP gammaSEXP, SEXP pstSEXP, SEXP tauSEXP, SEXP lambdaSEXP) {
+RcppExport SEXP _mfa_sample_x(SEXP xSEXP, SEXP is_dropoutSEXP, SEXP cSEXP, SEXP kSEXP, SEXP gammaSEXP, SEXP pstSEXP, SEXP tauSEXP, SEXP lambdaSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -242,21 +242,21 @@ END_RCPP
 }
 
 static const R_CallMethodDef CallEntries[] = {
-    {"mfa_log_d_norm", (DL_FUNC) &mfa_log_d_norm, 3},
-    {"mfa_log_sum_exp", (DL_FUNC) &mfa_log_sum_exp, 1},
-    {"mfa_r_bernoulli_mat", (DL_FUNC) &mfa_r_bernoulli_mat, 1},
-    {"mfa_calculate_nuk", (DL_FUNC) &mfa_calculate_nuk, 7},
-    {"mfa_calculate_lamk", (DL_FUNC) &mfa_calculate_lamk, 4},
-    {"mfa_sample_k", (DL_FUNC) &mfa_sample_k, 7},
-    {"mfa_calculate_nuc", (DL_FUNC) &mfa_calculate_nuc, 7},
-    {"mfa_calculate_lamc", (DL_FUNC) &mfa_calculate_lamc, 3},
-    {"mfa_sample_c", (DL_FUNC) &mfa_sample_c, 8},
-    {"mfa_pst_update_par", (DL_FUNC) &mfa_pst_update_par, 6},
-    {"mfa_sample_pst", (DL_FUNC) &mfa_sample_pst, 6},
-    {"mfa_tau_params", (DL_FUNC) &mfa_tau_params, 7},
-    {"mfa_sample_tau", (DL_FUNC) &mfa_sample_tau, 7},
-    {"mfa_calculate_pi", (DL_FUNC) &mfa_calculate_pi, 10},
-    {"mfa_sample_x", (DL_FUNC) &mfa_sample_x, 8},
+    {"_mfa_log_d_norm", (DL_FUNC) &_mfa_log_d_norm, 3},
+    {"_mfa_log_sum_exp", (DL_FUNC) &_mfa_log_sum_exp, 1},
+    {"_mfa_r_bernoulli_mat", (DL_FUNC) &_mfa_r_bernoulli_mat, 1},
+    {"_mfa_calculate_nuk", (DL_FUNC) &_mfa_calculate_nuk, 7},
+    {"_mfa_calculate_lamk", (DL_FUNC) &_mfa_calculate_lamk, 4},
+    {"_mfa_sample_k", (DL_FUNC) &_mfa_sample_k, 7},
+    {"_mfa_calculate_nuc", (DL_FUNC) &_mfa_calculate_nuc, 7},
+    {"_mfa_calculate_lamc", (DL_FUNC) &_mfa_calculate_lamc, 3},
+    {"_mfa_sample_c", (DL_FUNC) &_mfa_sample_c, 8},
+    {"_mfa_pst_update_par", (DL_FUNC) &_mfa_pst_update_par, 6},
+    {"_mfa_sample_pst", (DL_FUNC) &_mfa_sample_pst, 6},
+    {"_mfa_tau_params", (DL_FUNC) &_mfa_tau_params, 7},
+    {"_mfa_sample_tau", (DL_FUNC) &_mfa_sample_tau, 7},
+    {"_mfa_calculate_pi", (DL_FUNC) &_mfa_calculate_pi, 10},
+    {"_mfa_sample_x", (DL_FUNC) &_mfa_sample_x, 8},
     {NULL, NULL, 0}
 };
 
