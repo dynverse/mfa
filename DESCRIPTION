@@ -30,8 +30,5 @@ Suggests:
     rmarkdown, 
     BiocStyle,
     testthat
-Remotes:
-    bioc::Biobase,
-    bioc::BiocStyle
 VignetteBuilder: knitr
 NeedsCompilation: yes
